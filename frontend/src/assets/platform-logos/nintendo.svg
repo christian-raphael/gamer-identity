@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 1024 1024" style="width: 320px; height: 320px; transform-origin: 50% 50%; transform: scaleX(1) scaleY(1) rotate(0deg);" xml:space="preserve" preserveAspectRatio="xMidYMid meet"><rect id="svg-editor-bg-shape" data-editor="bg-shape" x="0" y="0" width="1024" height="1024" fill="#E60012" stroke="none" style="pointer-events: none;"/>
+<style type="text/css">
+	.st0{fill:#E60012;}
+	.st1{fill:#FFFFFF;}
+</style>
+<g id="Guides" class="">
+</g>
+<g id="Icon" class="">
+	<circle class="st0" cx="512" cy="512" r="512" style="fill:#E60012"/>
+	<g class="">
+		<title>Nintendo icon</title>
+		<path class="st1" d="M256.5,269.3h151.2l209.7,338.5V269.3h150.1v485.4H617.6L406.8,416.2v338.5H256.5V269.3"/>
+	</g>
+</g>
+</svg>

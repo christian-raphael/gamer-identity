@@ -3,7 +3,7 @@ import { createBrowserRouter, Router } from 'react-router'
 import { RouterProvider } from 'react-router/dom'
 import './index.css'
 import App from './App.tsx'
-import ProfilePage from './pages/profile/ProfilePage.tsx'
+import Profile from './pages/profile/Profile.tsx'
 
 const router = createBrowserRouter([
   {
@@ -12,7 +12,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile",
-    element: <ProfilePage/>
+    element: <Profile/>
   }
 ])
 

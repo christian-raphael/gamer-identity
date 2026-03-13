@@ -1,0 +1,44 @@
+section.user-card {
+    display: flex;
+    background-color: rgb(0, 24, 39);
+    width: 300px;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+div.profile-picture-container {
+    width: 60px;
+    height: 60px;
+}
+
+div.profile-picture-container img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+div.user-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+}
+
+div.user-info-container span {
+    font-weight: 200;
+}
+
+div.user-info-container ul {
+    display: flex;
+    list-style-type: none;
+}
+
+div.user-info-container ul li {
+    margin-right: 10px;
+}
+
+div.user-info-container ul img {
+    width: 16px;
+    height: 16px;
+}

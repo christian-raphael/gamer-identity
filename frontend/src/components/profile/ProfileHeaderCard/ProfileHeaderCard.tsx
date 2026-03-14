@@ -1,18 +1,19 @@
 import profilePicture from "../../../assets/sample-profile-picture.png"
-import images from "../../../assets/images"
+import { images } from "../../../assets/images"
 import "./ProfileHeaderCard.css"
 
 function ProfileHeaderCard() {
     return (
-        <section className="user-card">
+        <section className="header">
             <div className="profile-picture-container">
                 <img src={profilePicture} />
             </div>
             <div className="user-info-container">
-                <span>Hello,</span>
                 <h1>Chrz</h1>
+
+                <span>3 seguidores - 1 seguindo</span>
                 
-                {/* <ul>
+                <ul className="connected-platforms-list">
                     <li>
                         <img src={images.steam} />
                     </li>
@@ -25,7 +26,7 @@ function ProfileHeaderCard() {
                     <li>
                          <img src={images.nintendo} />
                     </li>
-                </ul> */}
+                </ul>
             </div>
         </section>
     )

@@ -1,0 +1,63 @@
+div.profile-user-statistics-card {
+    margin-top: 30px;
+    background-color: #313131;
+    padding:  43px 27px;
+    display: flex;
+    align-items: center;
+}
+
+div.statistics-container {
+    display: flex;
+    height: 65px;
+    max-width: 90%;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+div.toggle-buttons-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    width: 150px;
+    margin-right: 15px;
+}
+
+div.toggle-buttons-container span {
+    font-weight: bolder;
+    width: 150px;
+    height: 30px;
+    font-size: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+div.toggle-buttons-container span:hover {
+    background-color: #5B4BEE;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+div.toggle-buttons-container span.active {
+    background-color: #5B4BEE;
+}
+
+div.statistic-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 130px;
+}
+
+div.statistic-item span {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+div.statistic-item h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.3;
+}

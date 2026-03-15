@@ -2,7 +2,7 @@ import './ProfileUserStatisticsCard.css';
 
 function ProfileUserStatisticsCard() {
   return (
-    <div className="profile-user-statistics-card">
+    <div className="profile-user-statistics-card card-container">
         <div className="statistics-container">
             <div className="toggle-buttons-container">
                 <span className="active">All Time</span>

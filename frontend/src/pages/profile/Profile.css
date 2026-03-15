@@ -2,3 +2,9 @@ section {
     margin-top: 50px;
     width: 1200px;
 }
+
+div.card-container {
+    margin-top: 30px;
+    background-color: #313131;
+    padding:  43px 27px;
+}

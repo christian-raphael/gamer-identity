@@ -1,11 +1,3 @@
-div.profile-user-statistics-card {
-    margin-top: 30px;
-    background-color: #313131;
-    padding:  43px 27px;
-    display: flex;
-    align-items: center;
-}
-
 div.statistics-container {
     display: flex;
     height: 65px;

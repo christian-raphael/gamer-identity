@@ -5,7 +5,7 @@ import "./Profile.css"
 
 function Profile() {
     return (
-        <section>
+        <section className="profile-page">
             <ProfileHeaderCard/>
             <ProfileUserStatisticsCard/>
             <ProfileFavoriteGamesCard/>

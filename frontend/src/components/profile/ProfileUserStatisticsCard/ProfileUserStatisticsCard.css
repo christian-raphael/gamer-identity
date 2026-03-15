@@ -1,24 +1,20 @@
 div.statistics-container {
-    display: flex;
-    height: 65px;
-    max-width: 90%;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: minmax(140px, 180px) repeat(auto-fit, minmax(130px, 1fr));
     gap: 30px;
+    align-items: start;
 }
 
 div.toggle-buttons-container {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    width: 150px;
-    margin-right: 15px;
+    gap: 8px;
 }
 
 div.toggle-buttons-container span {
     font-weight: bolder;
-    width: 150px;
-    height: 30px;
+    width: 100%;
+    min-height: 30px;
     font-size: 0.7rem;
     display: flex;
     align-items: center;
@@ -41,6 +37,7 @@ div.statistic-item {
     flex-direction: column;
     justify-content: space-between;
     min-width: 130px;
+    gap: 6px;
 }
 
 div.statistic-item span {
@@ -49,7 +46,20 @@ div.statistic-item span {
 }
 
 div.statistic-item h2 {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 900;
-    line-height: 1.3;
+    line-height: 1.1;
+}
+
+@media (max-width: 640px) {
+    div.statistics-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    div.statistics-container {
+        grid-template-columns: 1fr;
+    }
 }

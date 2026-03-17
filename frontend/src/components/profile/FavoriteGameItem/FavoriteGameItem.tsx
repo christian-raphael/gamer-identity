@@ -1,6 +1,9 @@
 import "./FavoriteGameItem.css"
 import { platformLogos } from "../../../assets/images";
 import type { JSX } from "react";
+import { clsx } from "clsx";
+import EmojiEvents from "@mui/icons-material/EmojiEvents";
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 
 interface FavoriteGameItemProps {
     game: {
@@ -41,9 +44,13 @@ function FavoriteGameItem({ game }: FavoriteGameItemProps) {
                     {buildPlatformsLogosElements(game.platforms)}
                 </div>
                 <div>
-                    <span>{buildAchievementsString({ game })}</span>
+                    <span className={clsx("achievements", { "completed": buildAchievementsString({ game }).includes("100%") })}>
+                        <EmojiEvents fontSize="small"/> {buildAchievementsString({ game })}
+                    </span>
+                    <span className="playtime">
+                        <AccessTimeIcon fontSize="small"/> Playtime: {game.playtime}
+                    </span>
                 </div>
-                <span>Playtime: {game.playtime}</span>
             </div>
         </div>
     );

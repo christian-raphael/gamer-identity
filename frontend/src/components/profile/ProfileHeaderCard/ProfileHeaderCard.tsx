@@ -1,5 +1,5 @@
 import profilePicture from "../../../assets/sample-profile-picture.png"
-import { images } from "../../../assets/images"
+import { platformLogos } from "../../../assets/images"
 import "./ProfileHeaderCard.css"
 
 function ProfileHeaderCard() {
@@ -15,16 +15,16 @@ function ProfileHeaderCard() {
                 
                 <ul className="connected-platforms-list">
                     <li>
-                        <img src={images.steam} />
+                        <img src={platformLogos.steam} />
                     </li>
                     <li>
-                         <img src={images.playstation} />
+                         <img src={platformLogos.playstation} />
                     </li>
                     <li>
-                         <img src={images.xbox} />
+                         <img src={platformLogos.xbox} />
                     </li>
                     <li>
-                         <img src={images.nintendo} />
+                         <img src={platformLogos.nintendo} />
                     </li>
                 </ul>
             </div>

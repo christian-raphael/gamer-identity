@@ -1,4 +1,6 @@
 import "./FavoriteGameItem.css"
+import { platformLogos } from "../../../assets/images";
+import type { JSX } from "react";
 
 interface FavoriteGameItemProps {
     game: {
@@ -7,7 +9,27 @@ interface FavoriteGameItemProps {
         playtime: string;
         platforms: string[];
         cover: string;
+        totalAchievements: string;
+        unlockedAchievements: string;
     }
+}
+
+function buildAchievementsString(gameData: FavoriteGameItemProps): string {
+    const totalGameAchievements:string = gameData.game.totalAchievements;
+    const unlockedGameAchievements:string = gameData.game.unlockedAchievements;
+
+    if (unlockedGameAchievements === totalGameAchievements) {
+        return "100% Completed";
+    }
+
+    return `${unlockedGameAchievements}/${totalGameAchievements}`;
+}
+
+function buildPlatformsLogosElements(platforms: string[]): JSX.Element[] {
+    return platforms.map((platform: string) => { 
+        const platformKey = platform.toLowerCase();
+        return <img key={platform} src={platformLogos[platformKey]} alt={`${platform} Logo`} className="platform-icon"/>
+    })
 }
 
 function FavoriteGameItem({ game }: FavoriteGameItemProps) {
@@ -15,15 +37,13 @@ function FavoriteGameItem({ game }: FavoriteGameItemProps) {
         <div className="favorite-game-item">
             <img src={game.cover} alt={game.gameTitle} className="game-cover" />
             <div className="game-info">
-                {/* <div>
-                    <span>Completed</span>
-                </div>
-                <h3>{game.gameTitle}</h3>
-                <span>Playtime: {game.playtime}</span>
                 <div className="platforms-container">
-                    <img src={SteamLogo} alt="Steam Logo" className="platform-icon"/>
+                    {buildPlatformsLogosElements(game.platforms)}
                 </div>
-                <button className="game-details-button">View Details</button> */}
+                <div>
+                    <span>{buildAchievementsString({ game })}</span>
+                </div>
+                <span>Playtime: {game.playtime}</span>
             </div>
         </div>
     );

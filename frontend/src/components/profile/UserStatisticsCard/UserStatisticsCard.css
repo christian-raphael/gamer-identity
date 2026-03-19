@@ -1,17 +1,17 @@
-div.statistics-container {
+.statistics-container {
     display: grid;
     grid-template-columns: minmax(140px, 180px) repeat(auto-fit, minmax(130px, 1fr));
     gap: 30px;
     align-items: start;
 }
 
-div.toggle-buttons-container {
+.toggle-buttons-container {
     display: flex;
     flex-direction: column;
     gap: 8px;
 }
 
-div.toggle-buttons-container span {
+.toggle-buttons-container span {
     font-weight: bolder;
     width: 100%;
     min-height: 30px;
@@ -22,17 +22,17 @@ div.toggle-buttons-container span {
     border-radius: 8px;
 }
 
-div.toggle-buttons-container span:hover {
+.toggle-buttons-container span:hover {
     background-color: #5B4BEE;
     cursor: pointer;
     transition: 0.2s;
 }
 
-div.toggle-buttons-container span.active {
+.toggle-buttons-container span.active {
     background-color: #5B4BEE;
 }
 
-div.statistic-item {
+.statistic-item {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -40,26 +40,26 @@ div.statistic-item {
     gap: 6px;
 }
 
-div.statistic-item span {
+.statistic-item span {
     font-size: 0.8rem;
     font-weight: 300;
 }
 
-div.statistic-item h2 {
+.statistic-item h2 {
     font-size: clamp(2rem, 6vw, 3rem);
     font-weight: 900;
     line-height: 1.1;
 }
 
 @media (max-width: 640px) {
-    div.statistics-container {
+    .statistics-container {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
 }
 
 @media (max-width: 480px) {
-    div.statistics-container {
+    .statistics-container {
         grid-template-columns: 1fr;
     }
 }

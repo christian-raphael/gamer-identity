@@ -17,27 +17,28 @@ interface FavoriteGameItemProps {
     }
 }
 
+function buildAchievementsString(gameData: FavoriteGameItemProps): string {
+    const totalGameAchievements:number = gameData.game.totalAchievements;
+    const unlockedGameAchievements:number = gameData.game.unlockedAchievements;
+
+    if (unlockedGameAchievements === totalGameAchievements) {
+        return "100% Completed";
+    }
+
+    return `${unlockedGameAchievements}/${totalGameAchievements}`;
+}
+
+function buildPlatformsLogosElements(platforms: string[]): JSX.Element[] {
+    return platforms.map((platform: string) => { 
+        const platformKey = platform.toLowerCase();
+        return <img key={platform} src={platformLogos[platformKey]} alt={`${platform} Logo`} className="platform-icon"/>
+    })
+}
+
 function FavoriteGameItem({ game }: FavoriteGameItemProps) {
 
-    function buildAchievementsString(gameData: FavoriteGameItemProps): string {
-        const totalGameAchievements:number = gameData.game.totalAchievements;
-        const unlockedGameAchievements:number = gameData.game.unlockedAchievements;
-
-        if (unlockedGameAchievements === totalGameAchievements) {
-            return "100% Completed";return `${unlockedGameAchievements}/${totalGameAchievements}`;
-        }
-
-        return `${unlockedGameAchievements}/${totalGameAchievements}`;
-    }
-
-    function buildPlatformsLogosElements(platforms: string[]): JSX.Element[] {
-        return platforms.map((platform: string) => { 
-            const platformKey = platform.toLowerCase();
-            return <img key={platform} src={platformLogos[platformKey]} alt={`${platform} Logo`} className="platform-icon"/>
-        })
-    }
-
     const achievementsString = buildAchievementsString({ game });
+    const isCompleted = achievementsString.includes("100%");
 
     return (
         <div className="favorite-game-item">
@@ -47,7 +48,7 @@ function FavoriteGameItem({ game }: FavoriteGameItemProps) {
                     {buildPlatformsLogosElements(game.platforms)}
                 </div>
                 <div>
-                    <span className={clsx("achievements", { "completed": achievementsString.includes("100%") })}>
+                    <span className={clsx("achievements", { "completed": isCompleted })}>
                         <EmojiEvents fontSize="small"/> {achievementsString}
                     </span>
                     <span className="playtime">

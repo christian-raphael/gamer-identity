@@ -12,8 +12,7 @@ function LastGamePlayedCard() {
             <div className="last-game-played-details-container">
                 <div className="last-game-played-detail">
                     <h3 className="last-game-played-detail-label">
-                        Play
-                        Time
+                        Play Time
                     </h3>
                     <p className="last-game-played-detail-data">7.5 Hours</p>
                 </div>
@@ -23,8 +22,7 @@ function LastGamePlayedCard() {
                 </div>
                 <div className="last-game-played-detail">
                     <h3 className="last-game-played-detail-label">
-                        Played 
-                        in
+                        Played in
                     </h3>
                     <div className="last-game-played-platform-container">
                         <img src={platformLogos.steam} alt="Steam" className="played-platform-icon" />

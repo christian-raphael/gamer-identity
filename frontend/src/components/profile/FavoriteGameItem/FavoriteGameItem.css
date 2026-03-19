@@ -1,4 +1,4 @@
-div.favorite-game-item {
+.favorite-game-item {
     position: relative;
     width: 100%;
     min-height: 300px;
@@ -10,7 +10,7 @@ div.favorite-game-item {
     overflow: hidden;
 }
 
-div.favorite-game-item img.game-cover {
+.favorite-game-item img.game-cover {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -19,7 +19,7 @@ div.favorite-game-item img.game-cover {
     object-fit: cover;
 }
 
-div.game-info {
+.game-info {
     position: absolute;
     inset-inline: 0;
     bottom: 0;
@@ -33,26 +33,26 @@ div.game-info {
     background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
 }
 
-div.game-info div {
+.game-info div {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
 }
 
-div.platforms-container {
+.platforms-container {
     display: flex;
     gap: 5px;
     width: 100%;
     height: 20px;
 }
 
-div.platforms-container img {
+.platforms-container img {
     width: 20px;
     height: 20px;
     border-radius: 2px;
 }
 
-div.game-info span {
+.game-info span {
     display: flex;
     align-items: center;
     gap: 5px;
@@ -64,12 +64,12 @@ div.game-info span {
     font-weight: 600;
 }
 
-div.game-info span.completed {
+.game-info span.completed {
     background-color: #41794d;
 }
 
 @media (max-width: 480px) {
-    div.favorite-game-item {
+    .favorite-game-item {
         min-height: 260px;
     }
 }

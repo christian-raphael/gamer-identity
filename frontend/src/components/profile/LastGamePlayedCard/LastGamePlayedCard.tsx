@@ -18,6 +18,7 @@ function LastGamePlayedCard() {
                 </div>
                 <div className="last-game-played-detail">
                     <h3 className="last-game-played-detail-label">Achievements</h3>
+                    <progress className="achievements-progress-bar" value={8} max={20} />
                     <p className="last-game-played-detail-data">8/20</p>
                 </div>
                 <div className="last-game-played-detail">

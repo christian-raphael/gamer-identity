@@ -13,7 +13,6 @@ function LastGamePlayedCard() {
                 <div className="last-game-played-detail">
                     <h3 className="last-game-played-detail-label">
                         Play
-                        <br /> 
                         Time
                     </h3>
                     <p className="last-game-played-detail-data">7.5 Hours</p>
@@ -25,7 +24,6 @@ function LastGamePlayedCard() {
                 <div className="last-game-played-detail">
                     <h3 className="last-game-played-detail-label">
                         Played 
-                        <br /> 
                         in
                     </h3>
                     <div className="last-game-played-platform-container">

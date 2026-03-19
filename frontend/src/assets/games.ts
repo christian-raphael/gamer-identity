@@ -7,7 +7,7 @@ export const favoriteGames = [
         id: 1, 
         gameTitle: "Elden Ring",
         playtime: "120h",
-        platforms: new Array<string>("Steam"),
+        platforms: new Array<string>("Steam", "PlayStation"),
         cover: EldenRingCoverImage,
         totalAchievements: 50,
         unlockedAchievements: 50
@@ -18,7 +18,7 @@ export const favoriteGames = [
         playtime: "45h",
         platforms: new Array<string>("Steam"),
         cover: LifeIsStrangeCoverImage,
-        totalAchievements: 20,
+        totalAchievements: 29,
         unlockedAchievements: 27
     }, 
     {
@@ -27,7 +27,7 @@ export const favoriteGames = [
         playtime: "80h",
         platforms: new Array<string>("Steam"),
         cover: TerrariaCoverImage,
-        totalAchievements: 70,
+        totalAchievements: 90,
         unlockedAchievements: 82
     }
 ] as const;

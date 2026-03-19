@@ -19,10 +19,12 @@ div.last-game-played-banner-container img {
 }
 
 div.last-game-played-details-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: space-between;
     width: 100%;
+    gap: 10px;
     max-width: 500px;
 }
 
@@ -46,10 +48,10 @@ img.played-platform-icon {
 
 h3.last-game-played-detail-label {
     font-size: 1rem;
-    font-weight: 200;
+    font-weight: 600;
 }
 
 p.last-game-played-detail-data {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 300;
 }

@@ -1,8 +1,8 @@
-import './ProfileUserStatisticsCard.css';
+import './UserStatisticsCard.css';
 
-function ProfileUserStatisticsCard() {
-  return (
-    <div className="profile-user-statistics-card card-container">
+function UserStatisticsCard() {
+  return ( 
+    <div className="user-statistics-card card-container">
         <div className="statistics-container">
             <div className="toggle-buttons-container">
                 <span className="active">All Time</span>
@@ -33,4 +33,4 @@ function ProfileUserStatisticsCard() {
   );
 }
 
-export default ProfileUserStatisticsCard;
+export default UserStatisticsCard;

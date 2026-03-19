@@ -30,7 +30,7 @@ div.game-info {
     flex-direction: column;
     justify-content: flex-end;
     gap: 15px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.2));
 }
 
 div.game-info div {

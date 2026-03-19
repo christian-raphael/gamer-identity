@@ -12,14 +12,14 @@ interface FavoriteGameItemProps {
         playtime: string;
         platforms: string[];
         cover: string;
-        totalAchievements: string;
-        unlockedAchievements: string;
+        totalAchievements: number;
+        unlockedAchievements: number;
     }
 }
 
 function buildAchievementsString(gameData: FavoriteGameItemProps): string {
-    const totalGameAchievements:string = gameData.game.totalAchievements;
-    const unlockedGameAchievements:string = gameData.game.unlockedAchievements;
+    const totalGameAchievements:number = gameData.game.totalAchievements;
+    const unlockedGameAchievements:number = gameData.game.unlockedAchievements;
 
     if (unlockedGameAchievements === totalGameAchievements) {
         return "100% Completed";

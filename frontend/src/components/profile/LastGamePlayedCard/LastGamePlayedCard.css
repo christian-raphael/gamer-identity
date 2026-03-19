@@ -1,0 +1,55 @@
+div.last-game-played-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px
+}
+
+div.last-game-played-banner-container {
+    max-height: 300px;
+    max-width: 500px;   
+}
+
+div.last-game-played-banner-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+div.last-game-played-details-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+div.last-game-played-details-container div.last-game-played-detail {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+div.last-game-played-platform-container {
+    display: flex;
+    gap: 10px;
+}
+
+img.played-platform-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+h3.last-game-played-detail-label {
+    font-size: 1rem;
+    font-weight: 200;
+}
+
+p.last-game-played-detail-data {
+    font-size: 1rem;
+    font-weight: 600;
+}

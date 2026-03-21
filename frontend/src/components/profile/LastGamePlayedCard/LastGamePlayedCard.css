@@ -7,7 +7,7 @@
 }
 
 .last-game-played-banner-container {
-     width: 100%;
+    width: 100%;
     max-width: 500px;
     aspect-ratio: 5 / 3;
 }
@@ -37,7 +37,7 @@
 
 .last-game-played-platform-container {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .played-platform-icon {
@@ -49,9 +49,13 @@
 .last-game-played-detail-label {
     font-size: 1rem;
     font-weight: 600;
+    line-height: 1.5;
 }
 
 .last-game-played-detail-data {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 1rem;
     font-weight: 300;
 }
@@ -60,10 +64,11 @@
   appearance: none;
   height: 10px;
   border-radius: 100px;
+  overflow: hidden;
     
   /* Chrome and Safari */
   &::-webkit-progress-bar {
-    background: #222222;
+    background-color: #222222;
     border-radius: 100px;
   }
 

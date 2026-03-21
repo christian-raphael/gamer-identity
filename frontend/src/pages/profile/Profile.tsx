@@ -3,6 +3,7 @@ import UserStatisticsCard from "../../components/profile/UserStatisticsCard/User
 import FavoriteGamesCard from "../../components/profile/FavoriteGamesCard/FavoriteGamesCard"
 import LastGamePlayedCard from "../../components/profile/LastGamePlayedCard/LastGamePlayedCard"
 import "./Profile.css"
+import { favoriteGames } from "../../assets/games.ts";
 
 function Profile() {
     return (
@@ -10,7 +11,7 @@ function Profile() {
             <ProfileHeaderCard/>
             <UserStatisticsCard/>
             <FavoriteGamesCard/>
-            <LastGamePlayedCard/>
+            <LastGamePlayedCard game={favoriteGames[3]} />
         </section>
     )
 }

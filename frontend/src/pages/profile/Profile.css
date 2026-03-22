@@ -2,23 +2,32 @@
     width: min(100%, 1200px);
     margin: 50px auto 0;
     padding: 0 16px 40px;
+    display: grid;
+    grid-template-rows: 1fr;
+    gap: 30px;
 }
 
 div.card-container {
     width: 100%;
-    margin-top: 30px;
     padding: clamp(20px, 4vw, 43px) clamp(16px, 3vw, 27px);
     background-color: #313131;
     border-radius: 16px;
 }
 
+.bottom-cards-container {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: 1.5fr 1fr;
+}
+
 @media (max-width: 640px) {
+
+    .bottom-cards-container {
+        grid-template-columns: 1fr;
+    }
+
     .profile-page {
         margin-top: 24px;
         padding: 0 12px 24px;
-    }
-
-    div.card-container {
-        margin-top: 20px;
     }
 }

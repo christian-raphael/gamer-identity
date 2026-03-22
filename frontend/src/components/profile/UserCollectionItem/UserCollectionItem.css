@@ -7,12 +7,15 @@
 
 .collection-covers {
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     border-radius: 10px;
     overflow: hidden;
     aspect-ratio: 1 / 1;
+}
+
+.has-at-least-four-games {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .collection-covers img {

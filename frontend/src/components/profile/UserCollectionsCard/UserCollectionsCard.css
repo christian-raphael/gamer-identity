@@ -3,12 +3,17 @@
     flex-direction: column;
 }
 
-/* fix space-between for 3 items in the collection (gap for 2 items, 
-            and space-between for 3 items) */
 .main-collections-area {
     display: flex;
-    justify-content: space-between;
     width: 100%;
     margin-top: 25px;
-    background-color: red;
+    flex-wrap: wrap;
+}
+
+.two-collections {
+    gap: 25px;
+}
+
+.three-collections {
+    justify-content: space-between;
 }

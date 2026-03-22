@@ -1,5 +1,4 @@
-import { idID } from "@mui/material/locale";
-import type { Platform } from "../components/profile/types";
+import type { Platform, Game } from "../components/profile/types";
 import EldenRingCoverImage from "./game-covers/elden-ring-cover.jpg"
 import LifeIsStrangeCoverImage from "./game-covers/life-is-stange-cover.png"
 import TerrariaCoverImage from "./game-covers/terraria-cover.jpg"
@@ -16,7 +15,7 @@ export const favoriteGames = [
         id: 1, 
         gameTitle: "Elden Ring",
         playtime: "120",
-        platforms: new Array<Platform>("steam", "playstation"),
+        platforms: ["steam", "playstation"],
         cover: EldenRingCoverImage,
         totalAchievements: 50,
         unlockedAchievements: 50
@@ -25,7 +24,7 @@ export const favoriteGames = [
         id: 2,
         gameTitle: "Life is Strange",
         playtime: "45",
-        platforms: new Array<Platform>("steam"),
+        platforms: ["steam"],
         cover: LifeIsStrangeCoverImage,
         totalAchievements: 29,
         unlockedAchievements: 27
@@ -34,7 +33,7 @@ export const favoriteGames = [
         id: 3,
         gameTitle: "Terraria",
         playtime: "80",
-        platforms: new Array<Platform>("steam", "xbox"),
+        platforms: ["steam", "xbox"],
         cover: TerrariaCoverImage,
         totalAchievements: 90,
         unlockedAchievements: 90
@@ -43,42 +42,100 @@ export const favoriteGames = [
         id: 4,
         gameTitle: "Resident Evil Requiem",
         playtime: "60",
-        platforms: new Array<Platform>("steam"),
+        platforms: ["steam"],
         cover: RECoverImage,
         totalAchievements: 30,
         unlockedAchievements: 20
     }
 ] as const;
 
-export const collectionGames = [
+const firstCollection: Game[] = [
     {
         id: 1,
         gameTitle: "Shadow of the Colossus",
-        gameCover: SOFTColossusCoverImage
+        cover: SOFTColossusCoverImage,
+        playtime: "60",
+        platforms: ["steam"],
+        totalAchievements: 30,
+        unlockedAchievements: 20
     },
     {
         id: 2,
         gameTitle: "Life is Strange: Reunion",
-        gameCover: LisReunionCoverImage
+        cover: LisReunionCoverImage,
+        playtime: "60",
+        platforms: ["steam"],
+        totalAchievements: 30,
+        unlockedAchievements: 20
     },
     {
         id: 3,
         gameTitle: "Resident Evil: Code Veronica",
-        gameCover: RECodeVeronicaCoverImage
+        cover: RECodeVeronicaCoverImage,
+        playtime: "60",
+        platforms: ["steam"],
+        totalAchievements: 30,
+        unlockedAchievements: 20
     },
     {
         id: 4,
         gameTitle: "Nier: Automata",
-        gameCover: NierCoverImage
+        cover: NierCoverImage,
+        playtime: "60",
+        platforms: ["steam"],
+        totalAchievements: 30,
+        unlockedAchievements: 20
     },
     {
         id: 5,
         gameTitle: "Demon Souls: Remake",
-        gameCover: DemonSoulsCoverImage
+        cover: DemonSoulsCoverImage,
+        playtime: "60",
+        platforms: ["steam"],
+        totalAchievements: 30,
+        unlockedAchievements: 20
     }, 
     {
         id: 6,
         gameTitle: "Mewgenics",
-        gameCover: MewgenicsCoverImage
+        cover: MewgenicsCoverImage,
+        playtime: "60",
+        platforms: ["steam"],
+        totalAchievements: 30,
+        unlockedAchievements: 20
+    }
+] as const;
+
+const secondCollection: Game[] = [
+    {
+        id: 5,
+        gameTitle: "Demon Souls: Remake",
+        cover: DemonSoulsCoverImage,
+        playtime: "60",
+        platforms: ["steam"],
+        totalAchievements: 30,
+        unlockedAchievements: 20
+    },
+    {
+        id: 2,
+        gameTitle: "Resident Evil Requiem",
+        playtime: "60",
+        platforms: ["steam"],
+        cover: RECoverImage,
+        totalAchievements: 30,
+        unlockedAchievements: 20
+    }
+] as const;
+
+export const userCollections = [
+    {
+        id: 1,
+        collectionName: "Backlogged Games",
+        games: firstCollection
+    },
+    {
+        id: 2,
+        collectionName: "To 100%",
+        games: secondCollection
     }
 ] as const;

@@ -1,36 +1,42 @@
-import { collectionGames } from "../../../assets/games.ts";
 import "./UserCollectionItem.css";
+import type { UserCollection } from "../types.ts";
+import type { JSX } from "react";
+import { clsx } from "clsx";
 
-function buildGameCoversElements() {
-  const gameCoversElements = [];
+interface UserCollectionItemProps {
+    collection: UserCollection;
+}
 
-  for (let i = 0; i < 4; i++) {
-    const game = collectionGames[i];
-    gameCoversElements.push(<img key={game.id} src={game.gameCover} alt={game.gameTitle} />);
-  }
-
-  return gameCoversElements;
+function buildGameCoversElements(collection: UserCollection): JSX.Element[] {
+  return collection.games.slice(0, 4).map((game) => (
+    <img key={game.id} src={game.cover} alt={game.gameTitle} />
+  ));
 }
 
 function getRemainingGameCount(collectionSize: number) {
   const remainingGames = collectionSize - 4;
-  return remainingGames > 0 ? `+${remainingGames}` : '';
+  return remainingGames > 0 ? `+${remainingGames}` : null;
 }
 
-function UserCollectionItem() {
-  const gameCoversElements = buildGameCoversElements();
-  const remainingGameCount = getRemainingGameCount(collectionGames.length);
-  const isRemainingGameCountVisible = remainingGameCount !== '';
+function UserCollectionItem({ collection }: UserCollectionItemProps) {
+  const gameCoversElements = buildGameCoversElements(collection);
+  const collectionSize = collection.games.length;
+  const remainingGameCount = getRemainingGameCount(collectionSize);
+  const isRemainingGameCountVisible = remainingGameCount !== null;
+
+  const collectionItemClass = clsx("collection-covers", {
+    "has-at-least-four-games": collectionSize >= 4
+  });
 
   return (
      <div className="collection-item">
-        <div className="collection-covers">
+        <div className={collectionItemClass}>
           {gameCoversElements}
           {isRemainingGameCountVisible && (
             <span className="game-count">{remainingGameCount}</span>
           )}
         </div>
-        <h3>Backlogged Games</h3>
+        <h3>{collection.collectionName}</h3>
     </div>
   );
 }

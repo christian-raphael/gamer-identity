@@ -9,3 +9,9 @@ export interface Game {
     totalAchievements: number;
     unlockedAchievements: number;
 }
+
+export interface UserCollection {
+    id: number;
+    collectionName: string;
+    games: Game[];
+}

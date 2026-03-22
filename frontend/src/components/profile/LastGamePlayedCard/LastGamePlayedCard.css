@@ -1,9 +1,10 @@
-.last-game-played-card {
+.last-game-played-container {
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: 15px
+    gap: 24px
 }
 
 .last-game-played-banner-container {

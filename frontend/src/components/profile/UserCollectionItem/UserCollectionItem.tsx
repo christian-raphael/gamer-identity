@@ -1,4 +1,5 @@
 import { collectionGames } from "../../../assets/games.ts";
+import "./UserCollectionItem.css";
 
 function buildGameCoversElements() {
   const gameCoversElements = [];
@@ -19,16 +20,17 @@ function getRemainingGameCount(collectionSize: number) {
 function UserCollectionItem() {
   const gameCoversElements = buildGameCoversElements();
   const remainingGameCount = getRemainingGameCount(collectionGames.length);
+  const isRemainingGameCountVisible = remainingGameCount !== '';
 
   return (
-    <div>
-        <div className="collection-item">
-            <div className="game-covers">
-              {gameCoversElements}
-              <span className="game-count">{remainingGameCount}</span>
-            </div>
-            <h3>Backloged Games</h3>
+     <div className="collection-item">
+        <div className="collection-covers">
+          {gameCoversElements}
+          {isRemainingGameCountVisible && (
+            <span className="game-count">{remainingGameCount}</span>
+          )}
         </div>
+        <h3>Backlogged Games</h3>
     </div>
   );
 }

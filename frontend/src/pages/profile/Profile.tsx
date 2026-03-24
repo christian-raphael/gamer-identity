@@ -13,8 +13,8 @@ function Profile() {
             <UserStatisticsCard/>
             <FavoriteGamesCard/>
             <div className="bottom-cards-container">
-                <UserCollectionsCard/>
                 <LastGamePlayedCard game={favoriteGames[3]} />
+                <UserCollectionsCard/>
             </div>
         </section>
     )

@@ -1,5 +1,5 @@
 .profile-page {
-    width: min(100%, 1250px);
+    width: min(100%, 1400px);
     margin: 50px auto 0;
     padding: 0 16px 40px;
     display: grid;
@@ -16,15 +16,21 @@ div.card-container {
 
 .bottom-cards-container {
     display: grid;
+    --bottom-card-media-height: clamp(180px, 18vw, 255px);
     gap: 30px;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1.8fr;
+    align-items: start;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 960px) {
 
     .bottom-cards-container {
         grid-template-columns: 1fr;
+        --bottom-card-media-height: clamp(180px, 48vw, 260px);
     }
+}
+
+@media (max-width: 640px) {
 
     .profile-page {
         margin-top: 24px;

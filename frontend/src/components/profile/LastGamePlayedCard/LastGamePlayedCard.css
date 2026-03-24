@@ -1,3 +1,5 @@
+
+
 .last-game-played-container {
     margin-top: 25px;
     display: flex;
@@ -9,7 +11,7 @@
 
 .last-game-played-banner-container {
     width: 100%;
-    aspect-ratio: 5 / 3;
+    height: var(--bottom-card-media-height, clamp(180px, 18vw, 255px));
 }
 
 .last-game-played-banner-container img {
@@ -22,7 +24,7 @@
 .last-game-played-details-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: flex-start;
     width: 100%;
     gap: 10px;
     max-width: 500px;

@@ -1,15 +1,15 @@
 .collection-item {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 200px;
+    gap: 14px;
+    width: 100%;
 }
 
 .collection-covers {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    aspect-ratio: 1 / 1;
+    height: var(--bottom-card-media-height, clamp(180px, 18vw, 255px));
 }
 
 .has-at-least-four-games {

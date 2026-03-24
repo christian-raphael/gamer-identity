@@ -15,7 +15,7 @@ export const favoriteGames = [
         id: 1, 
         gameTitle: "Elden Ring",
         playtime: "120",
-        platforms: ["steam", "playstation"],
+        platforms: new Array<Platform>("steam", "playstation"),
         cover: EldenRingCoverImage,
         totalAchievements: 50,
         unlockedAchievements: 50
@@ -24,7 +24,7 @@ export const favoriteGames = [
         id: 2,
         gameTitle: "Life is Strange",
         playtime: "45",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         cover: LifeIsStrangeCoverImage,
         totalAchievements: 29,
         unlockedAchievements: 27
@@ -33,7 +33,7 @@ export const favoriteGames = [
         id: 3,
         gameTitle: "Terraria",
         playtime: "80",
-        platforms: ["steam", "xbox"],
+        platforms: new Array<Platform>("steam", "xbox"),
         cover: TerrariaCoverImage,
         totalAchievements: 90,
         unlockedAchievements: 90
@@ -42,7 +42,7 @@ export const favoriteGames = [
         id: 4,
         gameTitle: "Resident Evil Requiem",
         playtime: "60",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         cover: RECoverImage,
         totalAchievements: 30,
         unlockedAchievements: 20
@@ -55,7 +55,7 @@ const firstCollection: Game[] = [
         gameTitle: "Shadow of the Colossus",
         cover: SOFTColossusCoverImage,
         playtime: "60",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         totalAchievements: 30,
         unlockedAchievements: 20
     },
@@ -64,7 +64,7 @@ const firstCollection: Game[] = [
         gameTitle: "Life is Strange: Reunion",
         cover: LisReunionCoverImage,
         playtime: "60",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         totalAchievements: 30,
         unlockedAchievements: 20
     },
@@ -73,7 +73,7 @@ const firstCollection: Game[] = [
         gameTitle: "Resident Evil: Code Veronica",
         cover: RECodeVeronicaCoverImage,
         playtime: "60",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         totalAchievements: 30,
         unlockedAchievements: 20
     },
@@ -82,7 +82,7 @@ const firstCollection: Game[] = [
         gameTitle: "Nier: Automata",
         cover: NierCoverImage,
         playtime: "60",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         totalAchievements: 30,
         unlockedAchievements: 20
     },
@@ -91,7 +91,7 @@ const firstCollection: Game[] = [
         gameTitle: "Demon Souls: Remake",
         cover: DemonSoulsCoverImage,
         playtime: "60",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         totalAchievements: 30,
         unlockedAchievements: 20
     }, 
@@ -100,7 +100,7 @@ const firstCollection: Game[] = [
         gameTitle: "Mewgenics",
         cover: MewgenicsCoverImage,
         playtime: "60",
-        platforms: ["steam"],
+        platforms: new Array<Platform>("steam"),
         totalAchievements: 30,
         unlockedAchievements: 20
     }
@@ -135,6 +135,11 @@ export const userCollections = [
     },
     {
         id: 2,
+        collectionName: "To 100%",
+        games: secondCollection
+    },
+    {
+        id: 3,
         collectionName: "To 100%",
         games: secondCollection
     }

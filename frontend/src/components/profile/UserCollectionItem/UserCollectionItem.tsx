@@ -8,7 +8,10 @@ interface UserCollectionItemProps {
 }
 
 function buildGameCoversElements(collection: UserCollection): JSX.Element[] {
-  return collection.games.slice(0, 4).map((game) => (
+  const gameCount = collection.games.length;
+  const coversToShow = gameCount >= 4 ? 4 : 1;
+
+  return collection.games.slice(0, coversToShow).map((game) => (
     <img key={game.id} src={game.cover} alt={game.gameTitle} />
   ));
 }

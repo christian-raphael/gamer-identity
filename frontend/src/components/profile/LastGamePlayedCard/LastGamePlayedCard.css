@@ -22,12 +22,11 @@
 }
 
 .last-game-played-details-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
     gap: 10px;
-    max-width: 500px;
 }
 
 .last-game-played-details-container .last-game-played-detail {
@@ -39,12 +38,13 @@
 
 .last-game-played-platform-container {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 
 .played-platform-icon {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 5px;
 }
 

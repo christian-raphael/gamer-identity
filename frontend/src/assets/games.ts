@@ -7,7 +7,7 @@ import SOFTColossusCoverImage from "./game-covers/softc-cover.jpg"
 import LisReunionCoverImage from "./game-covers/lis-reunion-cover.jpg"
 import RECodeVeronicaCoverImage from "./game-covers/re-code-veronica-cover.jpg"
 import NierCoverImage from "./game-covers/nier-automata-cover.png"
-import DemonSoulsCoverImage from "./game-covers/ds-remake-cover.jpg"
+import DemonSoulsCoverImage from "./game-covers/ds-remake-cover.png"
 import MewgenicsCoverImage from "./game-covers/mewgenics-cover.png"
 
 export const favoriteGames = [
@@ -135,11 +135,6 @@ export const userCollections = [
     },
     {
         id: 2,
-        collectionName: "To 100%",
-        games: secondCollection
-    },
-    {
-        id: 3,
         collectionName: "To 100%",
         games: secondCollection
     }

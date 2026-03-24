@@ -15,7 +15,7 @@
 .has-at-least-four-games {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 50%);
 }
 
 .collection-covers img {

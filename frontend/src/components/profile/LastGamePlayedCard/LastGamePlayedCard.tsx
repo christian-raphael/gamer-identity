@@ -19,12 +19,17 @@ function LastGamePlayedCard({ game }: LastGamePlayedCardProps) {
                 <div className="last-game-played-details-container">
                     <div className="last-game-played-detail">
                         <h3 className="last-game-played-detail-label">
-                            Played <br/> Time
+                            Played Time
                         </h3>
                         <p className="last-game-played-detail-data">
                             <AccessTimeIcon fontSize="small"/>
                             {game.playtime} Hours
                         </p>
+                        <div className="last-game-played-platform-container">
+                            <p>Played on</p>
+                            <img src={platformLogos.steam} alt="Steam" className="played-platform-icon" />
+                            <p className="last-game-played-detail-data">Steam</p>
+                        </div>
                     </div>
                     <div className="last-game-played-detail">
                         <h3 className="last-game-played-detail-label">Achievements</h3>
@@ -36,15 +41,6 @@ function LastGamePlayedCard({ game }: LastGamePlayedCardProps) {
                             <EmojiEvents fontSize="small"/>
                             {game.unlockedAchievements}/{game.totalAchievements}
                         </p>
-                    </div>
-                    <div className="last-game-played-detail">
-                        <h3 className="last-game-played-detail-label">
-                            Played <br/> In
-                        </h3>
-                        <div className="last-game-played-platform-container">
-                            <img src={platformLogos.steam} alt="Steam" className="played-platform-icon" />
-                            <p className="last-game-played-detail-data">Steam</p>
-                        </div>
                     </div>
                 </div>
             </div>

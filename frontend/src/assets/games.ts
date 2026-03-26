@@ -139,3 +139,28 @@ export const userCollections = [
         games: secondCollection
     }
 ] as const;
+
+export const user = {
+    accountName: "chrz",
+    connectedPlatforms: [],
+    userStatistics: [
+        {
+            type: "alltime",
+            gamesOwned: 0,
+            finishedGames: 0,
+            completedGames: 0,
+            hoursPlayed: 0,
+            mostPlayedPlatform: ""
+        },
+        {
+            type: "annual",
+            gamesOwned: 0,
+            finishedGames: 0,
+            completedGames: 0,
+            hoursPlayed: 0,
+            mostPlayedPlatform: ""
+        }
+    ], 
+    favoriteGames: [],
+    collections: []
+} as const;

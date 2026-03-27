@@ -15,3 +15,33 @@ export interface UserCollection {
     collectionName: string;
     games: Game[];
 }
+
+export interface ConnectedPlatform {
+    platform: Platform;
+    username?: string;
+    connected: boolean;
+}
+
+export interface ProfileStats {
+    games: number;
+    finishedGames: number;
+    completedGames: number;
+    hoursPlayed: number;
+    mostPlayedPlatform: Platform;
+}
+
+export interface UserProfile {
+    id: string;
+    accountName: string;
+    accountAvatarUrl: string;
+    followersCount: number;
+    followingCount: number;
+    connectedPlatforms: ConnectedPlatform[];
+    stats: {
+        allTime: ProfileStats;
+        currentYear: ProfileStats;
+    };
+    favoriteGames: Game[]
+    lastPlayedGame?: Game;
+    collections: UserCollection[]
+}

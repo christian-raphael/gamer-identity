@@ -1,4 +1,4 @@
-import type { Platform, Game } from "../components/profile/types";
+import type { Platform, Game, UserProfile, ConnectedPlatform, UserCollection } from "../components/profile/types";
 import EldenRingCoverImage from "./game-covers/elden-ring-cover.jpg"
 import LifeIsStrangeCoverImage from "./game-covers/life-is-stange-cover.png"
 import TerrariaCoverImage from "./game-covers/terraria-cover.jpg"
@@ -10,7 +10,7 @@ import NierCoverImage from "./game-covers/nier-automata-cover.png"
 import DemonSoulsCoverImage from "./game-covers/ds-remake-cover.png"
 import MewgenicsCoverImage from "./game-covers/mewgenics-cover.png"
 
-export const favoriteGames = [
+export const favoriteGames:Game[] = [
     {
         id: 1, 
         gameTitle: "Elden Ring",
@@ -127,7 +127,7 @@ const secondCollection: Game[] = [
     }
 ] as const;
 
-export const userCollections = [
+export const userCollections:UserCollection[] = [
     {
         id: 1,
         collectionName: "Backlogged Games",
@@ -140,27 +140,49 @@ export const userCollections = [
     }
 ] as const;
 
-export const user = {
+const userPlatforms:ConnectedPlatform[] = [
+    {
+        platform: "steam",
+        connected: true
+    },
+    {
+        platform: "nintendo",
+        connected: false
+    },
+    {
+        platform: "playstation",
+        connected: true
+    },
+    {
+        platform: "xbox",
+        connected: true
+    }
+]
+
+export const user:UserProfile = {
+    id: "1",
     accountName: "chrz",
-    connectedPlatforms: [],
-    userStatistics: [
-        {
-            type: "alltime",
-            gamesOwned: 0,
+    accountAvatarUrl: "../../../assets/sample-profile-picture.png",
+    followersCount: 0,
+    followingCount: 0,
+    connectedPlatforms:  userPlatforms,
+    stats: {
+         allTime: {
+            games: 0,
             finishedGames: 0,
             completedGames: 0,
             hoursPlayed: 0,
-            mostPlayedPlatform: ""
+            mostPlayedPlatform: "steam"
         },
-        {
-            type: "annual",
-            gamesOwned: 0,
+        currentYear: {
+            games: 0,
             finishedGames: 0,
             completedGames: 0,
             hoursPlayed: 0,
-            mostPlayedPlatform: ""
+            mostPlayedPlatform: "steam"
         }
-    ], 
-    favoriteGames: [],
-    collections: []
+    }, 
+    favoriteGames: favoriteGames,
+    lastPlayedGame: favoriteGames[3],
+    collections: userCollections
 } as const;
